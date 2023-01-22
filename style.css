@@ -44,19 +44,45 @@ body {
     border-radius: 8px;
 }
 
+/* I removed all this part:
 .image-mobile {
     background-image: linear-gradient(hsla(277, 65%, 38%, 0.5), hsla(277, 38%, 51%, 0.5)), url(images/image-header-mobile.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     visibility: hidden;
+} */
+
+/* .image-mobile-container{} and .image-mobile-container img{} added :*/
+.image-mobile-container {
+    display: none;
+}
+
+.image-mobile-container img {
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    mix-blend-mode: multiply;
+    opacity: 0.8;
 }
 
 .image-container {
+/*     I removed the following lines and added background-color: hsl() :
     background-image: linear-gradient(hsla(277, 65%, 38%, 0.5), hsla(277, 38%, 51%, 0.5)), url(images/image-header-desktop.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    height: 100%; */
+    background-color: hsl(277, 64%, 61%);
+}
+
+/* .image-container img{} added : */
+.image-container img {
+    width: 100%;
     height: 100%;
+    object-fit: cover;
+    mix-blend-mode: multiply;
+    opacity: 0.8;
 }
 
 .stats-content {
@@ -131,10 +157,23 @@ body {
     .image-container {
         visibility: hidden;
     }
+    /*   .image-container img{} added:   */
+    .image-container img {
+        visibility: hidden;
+    }
+/*  the following class removed :
     .image-mobile {
         visibility: visible;
         width: 100%;
         height: 220px;
+    } */
+    /*   .image-mobile-container{} and .image-mobile-container img{} added:   */
+    .image-mobile-container {
+        display: block;
+        background-color: hsl(277, 64%, 61%);
+    }
+    .image-mobile-container img {
+        display: block;
     }
     .stats-content {
         margin: auto;
